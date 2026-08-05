@@ -9,7 +9,7 @@ Cada exercício isola um conceito específico da biblioteca, tornando este repos
 | # | Nome | Descrição | Status |
 |---|------|-----------|--------|
 | 01 | [RawKeys](#01-rawkeys) | Leitor de teclas básico, sem esperar Enter | ✅ Concluído |
-| 02 | [SilentInput](#02-silentinput) | Leitura de teclas sem eco na tela | 🔲 Pendente |
+| 02 | [SilentInput](#02-silentinput) | Leitura de teclas sem eco na tela | ✅ Concluído |
 | 03 | [SafeExit](#03-safeexit) | Restauração garantida do terminal original | 🔲 Pendente |
 | 04 | [ArrowSense](#04-arrowsense) | Detecção de setas do teclado | 🔲 Pendente |
 | 05 | [PulseCounter](#05-pulsecounter) | Loop não-bloqueante com contador em tempo real | 🔲 Pendente |
@@ -43,7 +43,7 @@ Obrigado por utilizar o RawKeys!!
 ---
 
 ## 02. SilentInput
-> 🔲 Pendente
+> ✅ Concluído
 
 Mesma base do RawKeys, mas com o eco do terminal desligado — as teclas digitadas não aparecem sozinhas na tela, apenas a mensagem impressa pelo próprio programa.
 
