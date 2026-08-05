@@ -8,7 +8,7 @@ Cada exercício isola um conceito específico da biblioteca, tornando este repos
 
 | # | Nome | Descrição | Status |
 |---|------|-----------|--------|
-| 01 | [RawKeys](#01-rawkeys) | Leitor de teclas básico, sem esperar Enter | 🔲 Pendente |
+| 01 | [RawKeys](#01-rawkeys) | Leitor de teclas básico, sem esperar Enter | ✅ Concluído |
 | 02 | [SilentInput](#02-silentinput) | Leitura de teclas sem eco na tela | 🔲 Pendente |
 | 03 | [SafeExit](#03-safeexit) | Restauração garantida do terminal original | 🔲 Pendente |
 | 04 | [ArrowSense](#04-arrowsense) | Detecção de setas do teclado | 🔲 Pendente |
@@ -22,17 +22,22 @@ Cada exercício isola um conceito específico da biblioteca, tornando este repos
 ---
 
 ## 01. RawKeys
-> 🔲 Pendente
+> ✅ Concluído
 
 Ativa o modo raw do terminal e imprime o código ASCII de cada tecla pressionada, sem esperar pelo Enter. Encerra ao receber a tecla `q`.
 
 **Conceitos praticados:** `tcgetattr`/`tcsetattr`, desligar `ICANON`, `read()` byte a byte, restauração da configuração original ao final.
 
 ```
-Modo raw ativo. Digite teclas ('q' para sair):
-Tecla: 'a' (codigo 97)
-Tecla: 'B' (codigo 66)
-Tecla de controle (codigo 13)
+Iniciando exibidor de teclas...
+ [ Bem-Vindo ao RawKeys ]
+
+Cod.Tecla: 97
+Cod.Tecla: 66
+Cod.Tecla: 10
+Cod.Tecla: 113
+
+Obrigado por utilizar o RawKeys!!
 ```
 
 ---
