@@ -10,14 +10,14 @@ Cada exercício isola um conceito específico da biblioteca, tornando este repos
 |---|------|-----------|--------|
 | 01 | [RawKeys](#01-rawkeys) | Leitor de teclas básico, sem esperar Enter | ✅ Concluído |
 | 02 | [SilentInput](#02-silentinput) | Leitura de teclas sem eco na tela | ✅ Concluído |
-| 03 | [SafeExit](#03-safeexit) | Restauração garantida do terminal original | 🔲 Pendente |
-| 04 | [ArrowSense](#04-arrowsense) | Detecção de setas do teclado | 🔲 Pendente |
-| 05 | [PulseCounter](#05-pulsecounter) | Loop não-bloqueante com contador em tempo real | 🔲 Pendente |
-| 06 | [TimeoutWait](#06-timeoutwait) | Leitura com tempo limite (`VTIME`) | 🔲 Pendente |
-| 07 | [EchoEditor](#07-echoeditor) | Mini editor de um caractere com Backspace manual | 🔲 Pendente |
-| 08 | [EchoToggle](#08-echotoggle) | Ligar/desligar eco em tempo real, sem sair do modo raw | 🔲 Pendente |
-| 09 | [TermCore](#09-termcore) | Módulo de terminal reutilizável (`terminal.h`/`terminal.c`) | 🔲 Pendente |
-| 10 | [GridLoop](#10-gridloop) | Protótipo de loop de jogo/visualizador para o GridForge | 🔲 Pendente |
+| 03 | [SafeExit](#03-safeexit) | Restauração garantida do terminal original | ✅ Concluído |
+| 04 | [ArrowSense](#04-arrowsense) | Detecção de setas do teclado | ✅ Concluído |
+| 05 | [PulseCounter](#05-pulsecounter) | Loop não-bloqueante com contador em tempo real | ✅ Concluído |
+| 06 | [TimeoutWait](#06-timeoutwait) | Leitura com tempo limite (`VTIME`) | ✅ Concluído |
+| 07 | [EchoEditor](#07-echoeditor) | Mini editor de um caractere com Backspace manual | ✅ Concluído |
+| 08 | [EchoToggle](#08-echotoggle) | Ligar/desligar eco em tempo real, sem sair do modo raw | ✅ Concluído |
+| 09 | [TermCore](#09-termcore) | Módulo de terminal reutilizável (`terminal.h`/`terminal.c`) | ✅ Concluído |
+| 10 | [GridLoop](#10-gridloop) | Protótipo de loop de jogo/visualizador para o GridForge | ✅ Concluído |
 
 ---
 
@@ -57,7 +57,7 @@ Recebi a tecla, codigo: 66
 ---
 
 ## 03. SafeExit
-> 🔲 Pendente
+> ✅ Concluído
 
 Garante que o terminal volta ao estado original em três cenários: saída normal do `main()`, saída forçada via `exit(1)` no meio do código, e (opcional) captura de `SIGINT` (Ctrl+C).
 
@@ -72,7 +72,7 @@ Terminal restaurado antes de encerrar.
 ---
 
 ## 04. ArrowSense
-> 🔲 Pendente
+> ✅ Concluído
 
 Detecta as sequências de escape geradas pelas setas do teclado (`ESC` + `[` + `A`/`B`/`C`/`D`) e imprime qual direção foi pressionada.
 
@@ -87,7 +87,7 @@ Seta para baixo
 ---
 
 ## 05. PulseCounter
-> 🔲 Pendente
+> ✅ Concluído
 
 Loop não-bloqueante (`VMIN=0, VTIME=0`) que incrementa um contador a cada ~100ms independente do teclado, mas soma 10 instantaneamente se a tecla espaço for pressionada.
 
@@ -101,7 +101,7 @@ Tecla capturada: (espaco)   (passo 53)
 ---
 
 ## 06. TimeoutWait
-> 🔲 Pendente
+> ✅ Concluído
 
 Configura `VMIN=0, VTIME=10` para esperar até 1 segundo por uma tecla; se nenhuma chegar nesse intervalo, imprime aviso de tempo esgotado e tenta novamente.
 
@@ -117,7 +117,7 @@ Tecla recebida: 'x'
 ---
 
 ## 07. EchoEditor
-> 🔲 Pendente
+> ✅ Concluído
 
 Simula manualmente o comportamento de apagar com Backspace (código 127), que o modo canônico faz sozinho mas que em modo raw precisa ser reimplementado.
 
@@ -130,7 +130,7 @@ Digite algo: ola mund_
 ---
 
 ## 08. EchoToggle
-> 🔲 Pendente
+> ✅ Concluído
 
 Liga e desliga o eco do terminal durante a execução do programa (tecla `e` alterna o estado), sem nunca sair do modo raw.
 
@@ -145,7 +145,7 @@ Eco desligado
 ---
 
 ## 09. TermCore
-> 🔲 Pendente
+> ✅ Concluído
 
 Módulo reutilizável de terminal, separando toda a lógica de `termios` em `terminal.h`/`terminal.c`, seguindo a arquitetura modular usada nos outros repositórios.
 
@@ -158,7 +158,7 @@ gcc -Iinclude src/main.c src/terminal.c -o programa
 ---
 
 ## 10. GridLoop
-> 🔲 Pendente
+> ✅ Concluído
 
 Combina modo raw, leitura não-bloqueante, detecção de setas, tecla de saída e restauração garantida em um único esqueleto de loop — a base de entrada reaproveitável para os visualizadores do GridForge.
 
